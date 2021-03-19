@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Algunas Estructuras de Datos &mdash; documentación de --- Cursos --- - </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Regresión Lineal" href="5-01-05.html" />
+    <link rel="prev" title="Funciones, Ejemplo: Estimar el número π" href="5-01-03.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> --- Cursos ---
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenido</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../content.html">Sesiones</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-1-01">Sesión 1-01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-1-02">Sesión 1-02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-2-05">Sesión 2-05</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-2-06">Sesión 2-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-2-07">Sesión 2-07</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-2-08">Sesión 2-08</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-3-09">Sesión 3-09</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-3-10">Sesión 3-10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-3-11">Sesión 3-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-3-12">Sesión 3-12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-4-13">Sesión 4-13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-4-14">Sesión 4-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-4-15">Sesión 4-15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content.html#sesion-4-16">Sesión 4-16</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../content.html#sesion-5-01">Sesión 5-01</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info.html">Información del curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grading.html">Evaluación del curso</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">--- Cursos ---</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../content.html">Sesiones</a> &raquo;</li>
+        
+      <li>Algunas Estructuras de Datos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/notebooks/julia/5-01-04.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 5ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Algunas-Estructuras-de-Datos">
+<h1>Algunas Estructuras de Datos<a class="headerlink" href="#Algunas-Estructuras-de-Datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<ul class="simple">
+<li><p>Para más ejemplos consultar <a class="reference external" href="https://introajulia.org/#chap10">Introducción a la programación en Julia</a>.</p></li>
+<li><p>Para más comparaciones con Python <a class="reference external" href="https://colab.research.google.com/github/ageron/julia_notebooks/blob/master/Julia_for_Pythonistas.ipynb">Julia for Pythonistas</a>.</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Julia</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np</span> <span class="pre">=</span> <span class="pre">pyimport(&quot;numpy&quot;)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">PyPlot</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">pylab</span> <span class="pre">import</span> <span class="pre">*</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1:10</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">11)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1:2:10</span></code>or<code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">11,</span> <span class="pre">2)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">11,</span> <span class="pre">2)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1.2:0.5:10.3</span></code>or<code class="docutils literal notranslate"><span class="pre">range(1.2,</span> <span class="pre">10.3,</span> <span class="pre">step=0.5)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np.arange(1.2,</span> <span class="pre">10.3,</span> <span class="pre">0.5)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">10,</span> <span class="pre">length=3)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np.linspace(1,</span> <span class="pre">10,</span> <span class="pre">3)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collect(1:5)</span></code>or<code class="docutils literal notranslate"><span class="pre">[i</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">1:5]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list(range(1,</span> <span class="pre">6))</span></code>or<code class="docutils literal notranslate"><span class="pre">[i</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(1,</span> <span class="pre">6)]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="Arreglos-(similar-a-las-listas-de-Python)">
+<h2>Arreglos (similar a las listas de Python)<a class="headerlink" href="#Arreglos-(similar-a-las-listas-de-Python)" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c">#Creamos un arreglo</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="sc">&#39;b&#39;</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">,</span> <span class="sc">&#39;d&#39;</span><span class="p">,</span> <span class="sc">&#39;e&#39;</span><span class="p">,</span> <span class="sc">&#39;f&#39;</span><span class="p">];</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">println</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="k">end</span><span class="p">])</span>
+
+<span class="c">#crea una copia del arreglo</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="o">:</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">t</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;t original &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sc">&#39;x&#39;</span><span class="p">,</span> <span class="sc">&#39;y&#39;</span><span class="p">];</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;w copia &quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sc">&#39;W&#39;</span><span class="p">,</span> <span class="sc">&#39;H&#39;</span><span class="p">];</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;s hace referencia al original &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;t ha sido modificado mediante s &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+[&#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+t original [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+w copia [&#39;a&#39;, &#39;x&#39;, &#39;y&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+s hace referencia al original [&#39;a&#39;, &#39;W&#39;, &#39;H&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+t ha sido modificado mediante s [&#39;a&#39;, &#39;W&#39;, &#39;H&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Sintaxis-de-punto">
+<h2>Sintaxis de punto<a class="headerlink" href="#Sintaxis-de-punto" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para cada operador binario, por ejemplo <em>, existe un operador punto .</em> que define la operación * para cada elemento del arreglo. [3, 4, 5] * 2 no está definido, pero [3, 4, 5] .* 3 se define como [3 * 2, 4 * 2, 5 * 2]</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="n">println</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">.*</span> <span class="mi">3</span> <span class="p">)</span>
+<span class="n">println</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">.^</span> <span class="mi">3</span> <span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">sum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">.^</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[9, 12, 15]
+[27, 64, 125]
+216
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c"># El operador punto permite aplicar a cada elemento de la lista una</span>
+<span class="c"># función específica</span>
+<span class="n">println</span><span class="p">(</span><span class="n">sum</span><span class="o">.</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">.+</span> <span class="mi">1</span>
+            <span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[12, 9]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="n">unas</span> <span class="o">=</span> <span class="n">uppercase</span><span class="o">.</span><span class="p">([</span><span class="s">&quot;lorena&quot;</span><span class="p">,</span> <span class="s">&quot;natalia&quot;</span><span class="p">,</span> <span class="s">&quot;laura&quot;</span><span class="p">]);</span>
+<span class="n">println</span><span class="p">(</span><span class="n">unas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#34;LORENA&#34;, &#34;NATALIA&#34;, &#34;LAURA&#34;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">.*</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>3-element Array{Int64,1}:
+  3
+  8
+ 15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Diccionarios">
+<h2>Diccionarios<a class="headerlink" href="#Diccionarios" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><a class="reference external" href="https://en.wikibooks.org/wiki/Introducing_Julia/Dictionaries_and_sets">Lectura Recomendada para más ejemplos</a></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c"># En python diccionario = {&#39;nombre&#39; : &#39;Natalia&#39;, &#39;edad&#39; : 26, &#39;cursos&#39;: [&#39;Python&#39;,&#39;Django&#39;,&#39;Julia&#39;] }</span>
+
+<span class="n">diccionario</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span> <span class="o">=&gt;</span> <span class="s">&quot;Natalia&quot;</span><span class="p">,</span> <span class="s">&quot;edad&quot;</span> <span class="o">=&gt;</span> <span class="mi">26</span><span class="p">,</span> <span class="s">&quot;cursos&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s">&quot;Python&quot;</span><span class="p">,</span><span class="s">&quot;Django&quot;</span><span class="p">,</span><span class="s">&quot;Julia&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Dict{String,Any} with 3 entries:
+  &quot;edad&quot;   =&gt; 26
+  &quot;cursos&quot; =&gt; [&quot;Python&quot;, &quot;Django&quot;, &quot;Julia&quot;]
+  &quot;nombre&quot; =&gt; &quot;Natalia&quot;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lugares</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;antioquia&quot;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;bogotá&quot;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s">&quot;caldas&quot;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&quot;supía&quot;</span> <span class="o">=&gt;</span> <span class="s">&quot;nunca&quot;</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">lugares</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;¿Cuántas veces has estado en caldas? &quot;</span><span class="p">,</span> <span class="n">lugares</span><span class="p">[</span><span class="s">&quot;caldas&quot;</span><span class="p">])</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;¿Cuántas veces has estado en supía? &quot;</span><span class="p">,</span> <span class="n">lugares</span><span class="p">[</span><span class="s">&quot;supía&quot;</span><span class="p">])</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;¿Caldas pertenece a la lista de lugares? &quot;</span><span class="p">,</span> <span class="s">&quot;caldas&quot;</span> <span class="o">∈</span> <span class="n">keys</span><span class="p">(</span><span class="n">lugares</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;¿Cartagena NO pertenece a la lista de lugares? &quot;</span><span class="p">,</span> <span class="s">&quot;cartagena&quot;</span> <span class="o">∉</span> <span class="n">keys</span><span class="p">(</span><span class="n">lugares</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Dict{String,Any}(&#34;antioquia&#34; =&gt; 5,&#34;caldas&#34; =&gt; 5,&#34;supía&#34; =&gt; &#34;nunca&#34;,&#34;bogotá&#34; =&gt; 2)
+
+¿Cuántas veces has estado en caldas? 5
+¿Cuántas veces has estado en supía? nunca
+¿Caldas pertenece a la lista de lugares? true
+¿Cartagena NO pertenece a la lista de lugares? true
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c">#Es posible definir el tipo de dato</span>
+<span class="n">municipios</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">{</span><span class="n">String</span><span class="p">,</span><span class="kt">Integer</span><span class="p">}(</span><span class="s">&quot;bello&quot;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;medellín&quot;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s">&quot;sabaneta&quot;</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span> <span class="s">&quot;medellín&quot;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">municipios</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">municipios</span><span class="p">[</span><span class="s">&quot;medellín&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Dict{String,Integer}(&#34;medellín&#34; =&gt; 5,&#34;bello&#34; =&gt; 1,&#34;sabaneta&#34; =&gt; 8)
+5
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c"># agregar miembros</span>
+<span class="n">municipios</span><span class="p">[</span><span class="s">&quot;copacabana&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">municipios</span><span class="p">[</span><span class="s">&quot;rionegro&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">println</span><span class="p">(</span><span class="n">municipios</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="c">#Eliminar miembros</span>
+<span class="n">delete!</span><span class="p">(</span><span class="n">municipios</span><span class="p">,</span> <span class="s">&quot;rionegro&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">municipios</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Dict{String,Integer}(&#34;medellín&#34; =&gt; 5,&#34;rionegro&#34; =&gt; 21,&#34;copacabana&#34; =&gt; 23,&#34;bello&#34; =&gt; 1,&#34;sabaneta&#34; =&gt; 8)
+
+Dict{String,Integer}(&#34;medellín&#34; =&gt; 5,&#34;copacabana&#34; =&gt; 23,&#34;bello&#34; =&gt; 1,&#34;sabaneta&#34; =&gt; 8)
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c"># sind calcula la fn seno con grados</span>
+<span class="c">#</span>
+<span class="n">seno</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="n">string</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">sind</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">360</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;El seno de 90 grados es &quot;</span><span class="p">,</span> <span class="n">seno</span><span class="p">[</span><span class="s">&quot;90&quot;</span><span class="p">])</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;El seno de 45 grados es &quot;</span><span class="p">,</span> <span class="n">get</span><span class="p">(</span><span class="n">seno</span><span class="p">,</span> <span class="s">&quot;45&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;El seno de 32 grados es &quot;</span><span class="p">,</span> <span class="n">get</span><span class="p">(</span><span class="n">seno</span><span class="p">,</span> <span class="s">&quot;32&quot;</span><span class="p">,</span> <span class="nb">nothing</span><span class="p">),</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">seno</span><span class="p">)</span>
+<span class="c">#for i = 0:5:360</span>
+<span class="c">#    println(i)</span>
+<span class="c">#end</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+El seno de 90 grados es 1.0
+El seno de 45 grados es 0.7071067811865476
+El seno de 32 grados es nothing
+
+Dict(&#34;320&#34; =&gt; -0.6427876096865394,&#34;65&#34; =&gt; 0.9063077870366499,&#34;155&#34; =&gt; 0.42261826174069944,&#34;335&#34; =&gt; -0.42261826174069944,&#34;75&#34; =&gt; 0.9659258262890683,&#34;50&#34; =&gt; 0.766044443118978,&#34;190&#34; =&gt; -0.17364817766693036,&#34;270&#34; =&gt; -1.0,&#34;290&#34; =&gt; -0.9396926207859084,&#34;115&#34; =&gt; 0.9063077870366499,&#34;340&#34; =&gt; -0.3420201433256687,&#34;10&#34; =&gt; 0.17364817766693036,&#34;250&#34; =&gt; -0.9396926207859084,&#34;120&#34; =&gt; 0.8660254037844386,&#34;230&#34; =&gt; -0.766044443118978,&#34;265&#34; =&gt; -0.9961946980917455,&#34;215&#34; =&gt; -0.573576436351046,&#34;305&#34; =&gt; -0.8191520442889918,&#34;255&#34; =&gt; -0.9659258262890683,&#34;25&#34; =&gt; 0.42261826174069944,&#34;160&#34; =&gt; 0.3420201433256687,&#34;275&#34; =&gt; -0.9961946980917455,&#34;5&#34; =&gt; 0.08715574274765818,&#34;280&#34; =&gt; -0.984807753012208,&#34;90&#34; =&gt; 1.0,&#34;175&#34; =&gt; 0.08715574274765818,&#34;225&#34; =&gt; -0.7071067811865476,&#34;205&#34; =&gt; -0.42261826174069944,&#34;195&#34; =&gt; -0.25881904510252074,&#34;315&#34; =&gt; -0.7071067811865476,&#34;150&#34; =&gt; 0.5,&#34;55&#34; =&gt; 0.8191520442889918,&#34;330&#34; =&gt; -0.5,&#34;285&#34; =&gt; -0.9659258262890683,&#34;310&#34; =&gt; -0.766044443118978,&#34;245&#34; =&gt; -0.9063077870366499,&#34;350&#34; =&gt; -0.17364817766693036,&#34;20&#34; =&gt; 0.3420201433256687,&#34;325&#34; =&gt; -0.573576436351046,&#34;80&#34; =&gt; 0.984807753012208,&#34;360&#34; =&gt; 0.0,&#34;125&#34; =&gt; 0.8191520442889918,&#34;110&#34; =&gt; 0.9396926207859084,&#34;185&#34; =&gt; -0.08715574274765818,&#34;70&#34; =&gt; 0.9396926207859084,&#34;165&#34; =&gt; 0.25881904510252074,&#34;140&#34; =&gt; 0.6427876096865394,&#34;300&#34; =&gt; -0.8660254037844386,&#34;0&#34; =&gt; 0.0,&#34;200&#34; =&gt; -0.3420201433256687,&#34;60&#34; =&gt; 0.8660254037844386,&#34;345&#34; =&gt; -0.25881904510252074,&#34;235&#34; =&gt; -0.8191520442889918,&#34;130&#34; =&gt; 0.766044443118978,&#34;260&#34; =&gt; -0.984807753012208,&#34;220&#34; =&gt; -0.6427876096865394,&#34;210&#34; =&gt; -0.5,&#34;35&#34; =&gt; 0.573576436351046,&#34;240&#34; =&gt; -0.8660254037844386,&#34;15&#34; =&gt; 0.25881904510252074,&#34;100&#34; =&gt; 0.984807753012208,&#34;40&#34; =&gt; 0.6427876096865394,&#34;170&#34; =&gt; 0.17364817766693036,&#34;45&#34; =&gt; 0.7071067811865476,&#34;295&#34; =&gt; -0.9063077870366499,&#34;145&#34; =&gt; 0.573576436351046,&#34;95&#34; =&gt; 0.9961946980917455,&#34;85&#34; =&gt; 0.9961946980917455,&#34;180&#34; =&gt; 0.0,&#34;135&#34; =&gt; 0.7071067811865476,&#34;355&#34; =&gt; -0.08715574274765818,&#34;105&#34; =&gt; 0.9659258262890683,&#34;30&#34; =&gt; 0.5)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="c"># Diccionario de Simbolos</span>
+
+<span class="n">midiccionario</span> <span class="o">=</span> <span class="kt">Dict</span><span class="p">(</span><span class="o">:</span><span class="n">x</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="o">:</span><span class="n">y</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="o">:</span><span class="n">z</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;El valor del simbolo z es: &quot;</span><span class="p">,</span> <span class="n">midiccionario</span><span class="p">[</span><span class="o">:</span><span class="n">z</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+El valor del simbolo z es: 1
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Tuplas-(Similar-a-Python)">
+<h2>Tuplas (Similar a Python)<a class="headerlink" href="#Tuplas-(Similar-a-Python)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Estas son tipos de arreglo inmutables. Una vez creadas no es posible agregar o quitar elementos.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+</pre></div>
+</div>
+<div class="input_area highlight-julia notranslate"><div class="highlight"><pre>
+<span></span><span class="n">amva</span> <span class="o">=</span> <span class="s">&quot;Medellín&quot;</span><span class="p">,</span><span class="s">&quot;Envigado&quot;</span><span class="p">,</span><span class="s">&quot;Sabaneta&quot;</span><span class="p">,</span><span class="s">&quot;Caldas&quot;</span><span class="p">,</span><span class="s">&quot;Barbosa&quot;</span><span class="p">,</span><span class="s">&quot;Copacabana&quot;</span><span class="p">,</span><span class="s">&quot;La Estrella&quot;</span><span class="p">,</span> <span class="s">&quot;Bello&quot;</span><span class="p">,</span> <span class="s">&quot;Itagüí&quot;</span><span class="p">,</span> <span class="s">&quot;Girardota&quot;</span>
+<span class="n">println</span><span class="p">(</span><span class="n">amva</span><span class="p">)</span>
+
+<span class="c">#tambien se pueden usar paréntesis</span>
+<span class="n">amvasur</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;Envigado&quot;</span><span class="p">,</span><span class="s">&quot;Sabaneta&quot;</span><span class="p">,</span><span class="s">&quot;Caldas&quot;</span><span class="p">,</span><span class="s">&quot;La Estrella&quot;</span><span class="p">,</span> <span class="s">&quot;Itagüí&quot;</span><span class="p">,)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">amvasur</span><span class="p">)</span>
+
+<span class="c">#se puede usar el constructor tuple</span>
+<span class="n">mitupla</span> <span class="o">=</span> <span class="n">tuple</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="s">&quot;venecia&quot;</span><span class="p">,</span> <span class="nb">pi</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">mitupla</span><span class="p">)</span>
+
+<span class="c">#para crear una tupla con un solo elemento se debe incluir una coma al final</span>
+<span class="n">capitalAntioquia</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;Medellín&quot;</span><span class="p">,)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">capitalAntioquia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&#34;Medellín&#34;, &#34;Envigado&#34;, &#34;Sabaneta&#34;, &#34;Caldas&#34;, &#34;Barbosa&#34;, &#34;Copacabana&#34;, &#34;La Estrella&#34;, &#34;Bello&#34;, &#34;Itagüí&#34;, &#34;Girardota&#34;)
+(&#34;Envigado&#34;, &#34;Sabaneta&#34;, &#34;Caldas&#34;, &#34;La Estrella&#34;, &#34;Itagüí&#34;)
+(32, &#39;a&#39;, &#34;venecia&#34;, π)
+(&#34;Medellín&#34;,)
+</pre></div></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Juan D. Velasquez &amp; Fernan A. Villa
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
